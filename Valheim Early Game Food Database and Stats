@@ -1,0 +1,20 @@
+--Create a food database using items from the game Valheim.
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, Location TEXT, Health INTEGER, Stamina INTEGER, Duration INTEGER);
+
+INSERT INTO store VALUES (1, "Raspberries", "Meadow", 7, 20, 600);
+INSERT INTO store VALUES (2, "Mushroom", "Meadow", 15, 15, 900);
+INSERT INTO store VALUES (3, "Honey", "Hive", 8, 35, 900);
+INSERT INTO store VALUES (4, "Blueberries", "The Black Forest", 8, 25, 600);
+
+INSERT INTO store VALUES (5, "Carrot", "The Black Forest", 10, 32, 900);
+INSERT INTO store VALUES (6, "Yellow Mushroom", "Crypts", 10, 30, 600);
+INSERT INTO store VALUES (7, "Onion", "Swamp", 13, 40, 900);
+
+SELECT * FROM store;
+
+--Order of highest to lowest health
+SELECT * FROM store ORDER BY health asc;
+
+--Order of lowest to highest stamina
+SELECT * FROM store ORDER BY stamina desc;
