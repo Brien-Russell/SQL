@@ -1,20 +1,34 @@
---Create a food database using items from the game Valheim.
+--Updated complete database of food either created or found in Valheim
+CREATE TABLE valheimFood (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, ingredients TEXT, health INTEGER, stamina INTEGER, healing INTEGER, duration INTEGER);
 
-CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, Location TEXT, Health INTEGER, Stamina INTEGER, Duration INTEGER);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Raspberries", "1 Raspberry", 7, 20, 1, 600);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Blueberries", "1 Blueberry", 8, 25, 1, 600);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Mushroom", "1 Mushroom", 15, 15, 1, 900);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Yellow Mushroom", "1 Yellow Mushroom", 10, 30, 1, 600);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Honey", "1 Honey", 8, 35, 1, 900);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Carrot", "1 Carrot", 10, 32, 1, 900);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Cloudberries", "1 Cloudberry", 13, 40, 1, 900);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUES ("Cooked Boar Meat", "1 Boar Meat", 30, 10, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Cooked Deer Meat", "1 Deer Meat", 35, 12, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Grilled Neck Tail", "1 Grilled Neck Tail", 25, 8, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Cooked Fish", "1 Fish", 45, 15, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Cooked Wolf Meat", "1 Wolf Meat", 45, 15, 3, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Cooked Serpent Meat", "1 Serpent Meat", 70, 23, 3, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Cooked Lox Meat", "1 Lox Meat", 50, 16, 4, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Queen's Jam", "8 Raspberries, 8 Blueberries", 14, 40, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Minced Meat Sauce", "1 Boar Meat, 1 Neck Tail, 1 Carrot", 45, 15, 3, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Boar Jerky", "1 Boar Meat, 1 Honey", 20, 20, 1, 1800);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Carrot Soup", "3 Carrots, 1 Mushroom", 15, 45, 2, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Deer Stew", "1 Cooked Deet Meat, 1 Blueberry, 1 Carrot", 40, 13, 2, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Sausages", "4 Entrails, 1 Boar Meat, 1 Thistle", 55, 18, 3, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Serpent Stew", "1 Cooked Serpent Meat, 1 Mushroom, 2 Honey", 80, 26, 4, 1800);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Turnip Stew", "3 Turnips, 1 Boar Meat", 18, 55, 2, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Onion Soup", "3 Onions", 12, 60, 1, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Muckshake", "1 Ooze, 2 Raspberries, 2 Blueberries", 16, 50, 1, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Black Soup", "1 Bloodbag, 1 Honey, 1 Turnip", 50, 17, 3, 1200);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Eyescream", "3 Greydwarf eyes, 1 Freeze Gland", 21, 65, 1, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Blood Pudding", "2 Bloodbags, 2 Thistle, 4 Flour", 23, 70, 4, 1500);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Lox Meat Pie", "4 Barley Flour, 2 Cloudberries, 2 Lox Meat", 75, 24, 4, 1800);
+INSERT INTO valheimFood (name, ingredients, health, stamina, healing, duration) VALUEs ("Bread", "10 Barley Flour", 25, 75, 1, 1800);
 
-INSERT INTO store VALUES (1, "Raspberries", "Meadow", 7, 20, 600);
-INSERT INTO store VALUES (2, "Mushroom", "Meadow", 15, 15, 900);
-INSERT INTO store VALUES (3, "Honey", "Hive", 8, 35, 900);
-INSERT INTO store VALUES (4, "Blueberries", "The Black Forest", 8, 25, 600);
-
-INSERT INTO store VALUES (5, "Carrot", "The Black Forest", 10, 32, 900);
-INSERT INTO store VALUES (6, "Yellow Mushroom", "Crypts", 10, 30, 600);
-INSERT INTO store VALUES (7, "Onion", "Swamp", 13, 40, 900);
-
-SELECT * FROM store;
-
---Order of highest to lowest health
-SELECT * FROM store ORDER BY health asc;
-
---Order of lowest to highest stamina
-SELECT * FROM store ORDER BY stamina desc;
+SELECT name AS "Longest Duration", duration AS "DURATION" FROM valheimFood ORDER BY duration desc;
